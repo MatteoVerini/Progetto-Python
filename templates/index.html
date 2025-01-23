@@ -48,10 +48,18 @@
                     <td>{{item.description}}</td>
                     <td>{{item.price}}</td>
                     <td>
-                       
+                        <div class="d-flex gap-2">
+                            <form action="/edit/{{ item.id }}" method="get">
+                                <button type="submit" class="btn btn-warning btn-sm">EDIT</button>
+                            </form>
+                            <form action="/delete/{{ item.id }}" method="post">
+                                <button type="submit" class="btn btn-danger btn-sm">DELETE</button>
+                            </form>
+                        </div>                       
                     </td>
                     
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
 
