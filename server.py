@@ -1,7 +1,5 @@
-from flask import Flask
+from flask import Flask, request, render_template, redirect
+import os, json
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!   ffhjbhgkhkb</p>"#commento prova#jh
+template_dir = os.path.abspath("./templates")
+app = Flask(__name__, template_folder=template_dir)
