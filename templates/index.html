@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resturant Menu</title>
+    <title>Restaurant Menu</title>
 </head>
 <body>
 
     <div class="header">
-        <h3>The Resturant Menu</h3>
+        <h3>The Restaurant Menu</h3>
         <p>Explore our dishes!</p>
     </div>
 
@@ -40,6 +40,19 @@
                     <th>Actions</th>
                 </tr>
             </thead>
+            <tbody>
+                {% for item in menu %}
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                       
+                    </td>
+                    
+                </tr>
+            </tbody>
         </table>
 
     </div>
