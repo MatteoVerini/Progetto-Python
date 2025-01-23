@@ -45,6 +45,10 @@ def add_menu_item():
     new_item={
         "id": len(menu_items)+1,
         "name":request.form["name"],
-        "description":request.form
+        "description":request.form["description"],
+        "price":float(request.form["price"])
         
     }
+    menu_items.append(new_item)
+    save_menu(menu_items)
+    return redirect('/')
