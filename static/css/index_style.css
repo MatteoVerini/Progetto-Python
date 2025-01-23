@@ -20,3 +20,20 @@ header{
     border-radius: 5px;
 
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #8b0000;
+    color: white;
+}
