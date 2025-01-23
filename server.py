@@ -39,3 +39,12 @@ def index():
     menu_list=[MenuItem(m["id"],m["name"],m["description"], m["price"])for m in menu_items]
     return render_template("index.html",menu=menu_list)
 
+@app.route('/add',methods=["POST"])
+def add_menu_item():
+    menu_items=load_menu()
+    new_item={
+        "id": len(menu_items)+1,
+        "name":request.form["name"],
+        "description":request.form
+        
+    }
