@@ -1,6 +1,22 @@
 [
     {
-        
+        "id": 1,
+        "name": "Pepperoni pizza",
+        "description": "Sauce, pepperoni, cheese",
+        "price": 7.6
+    },
+    {
+        "id": 2,
+        "name": "Hamburger",
+        "description": "Beef, Lettuce, Tomatoes, Pickles, Sauce",
+        "price": 8.5
     }
+    {
+        "id": 2,
+        "name": "Tacos",
+        "description": "Beef, Chili, Tomatoes, Onions, Sauce",
+        "price": 8.5
+    }
+    
 
 ]
