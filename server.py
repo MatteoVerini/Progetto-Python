@@ -33,5 +33,9 @@ def save_menu(menu_items):
     with open(menu_file, 'w') as file:
         json.dump(menu_items, file, indent=4)
 
-        
+@app.route('/',methods=["GET"])
+def index():
+    menu_items=load_menu()
+    menu_list=[MenuItem(m["id"],m["name"],m["description"], m["price"])for m in menu_items]
+    return render_template("index.html",menu=menu_list)
 
