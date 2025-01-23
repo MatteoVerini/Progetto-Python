@@ -37,3 +37,23 @@ table th {
     background-color: #8b0000;
     color: white;
 }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    background-color: #8b0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a52a2a;
+}
+
+.btn-secondary {
+    background-color: #555;
+}
