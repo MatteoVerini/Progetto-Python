@@ -41,6 +41,32 @@
         <h3>Edit Dish</h3>
         <p>Update the details of the selected dish</p>
     </div>    
+    
+    <div class="container">
+        <form action="/update/{{ item.id }}" method="post" class="mb-4">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="id" class="form-label">ID</label>
+                    <input type="text" id="id" class="form-control" value="{{ item.id }}" name="id" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" value="{{ item.name }}" name="name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" id="description" class="form-control" value="{{ item.description }}" name="description" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" id="price" class="form-control" step="0.01" value="{{ item.price }}" name="price" required>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">EDIT DISH</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 </body>
