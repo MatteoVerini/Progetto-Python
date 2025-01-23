@@ -10,7 +10,8 @@
         "name": "Hamburger",
         "description": "Beef, Lettuce, Tomatoes, Pickles, Sauce",
         "price": 8.5
-    }
+    },
+    
     {
         "id": 2,
         "name": "Tacos",
