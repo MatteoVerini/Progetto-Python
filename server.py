@@ -53,3 +53,24 @@ def add_menu_item():
     menu_items.append(new_item)
     save_menu(menu_items)
     return redirect('/')
+
+    @app.route('/edit/<int:item_id>', methods=["GET"])
+    def edit_menu_page(item_id):
+        menu_items = load_menu()
+        item_to_edit = next((item for item in menu_items if item["id"] == item_id), None)
+    if not item_to_edit:
+        return "Elemento non trovato", 404
+    return render_template("edit_menu.html", item=item_to_edit)
+
+
+    @app.route('/update/<int:item_id>', methods=["POST"])
+    def update_menu_item(item_id):
+        menu_items = load_menu()
+        for item in menu_items:
+            if item["id"] == item_id:
+                item["name"] = request.form["name"]
+                item["description"] = request.form["description"]
+                item["price"] = float(request.form["price"])
+            break
+        save_menu(menu_items)
+        return redirect('/')
